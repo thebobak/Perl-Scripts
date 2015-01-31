@@ -2,8 +2,10 @@ use File::Copy;
 
 ## Config ##
 
-my $root_folder = "/Users/bobak/Dropbox/_CHEC/2014-2015/q1";
-my @periods = ("p1","p2");
+my $root_folder = "/Users/bobak/Dropbox/_CHEC/2014-2015/_Q3/P4";
+my @periods = ("Student Folders");
+my $sourcefile = "/Users/bobak/Desktop/Lab - Photo Alterations.psd";
+my $destinationfile = "Lab - Photo Alterations.psd";
 
 ## Change into root folder ##
 
@@ -37,6 +39,7 @@ foreach $period (@periods) {
         if (-d $file)  {
             chdir($file);
             mkdir($newfoldername);
+            copy($sourcefile, $destinationfile) or die "Copy failed: $!";
             chdir("../");
         }
         
