@@ -2,10 +2,20 @@ use File::Copy;
 
 ## Config ##
 
+<<<<<<< Updated upstream
 my $root_folder = "/Users/bobak/Dropbox/_CHEC/2014-2015/_Q3/P4";
 my @periods = ("Student Folders");
+<<<<<<< HEAD
 my @sourcefiles = ("/Users/bobak/Desktop/Entry Slip.docx","/Users/bobak/Desktop/Instructions.docx");
 my @destinationfiles = ("Entry Slip.docx", "Instructions.docx");
+=======
+my $sourcefile = "/Users/bobak/Desktop/Lab - Photo Alterations.psd";
+my $destinationfile = "Lab - Photo Alterations.psd";
+=======
+my $root_folder = "/Users/bobak/Dropbox/_CHEC/2014-2015/Q3/P4/Student\ Folders";
+my @periods = ("p1","p2");
+>>>>>>> Stashed changes
+>>>>>>> origin/master
 
 ## Change into root folder ##
 
@@ -28,8 +38,8 @@ print "\n\n\n";
 my $newfoldername = "FINAL PROJECT";
 
 
-## Create the Folder in Each Period ##
 
+<<<<<<< Updated upstream
 foreach $period (@periods) {
 
     chdir($period) or die "folder doesn't exist\n\n";
@@ -50,8 +60,40 @@ foreach $period (@periods) {
         chdir("../");
         
     }
+=======
+@files = <*>;
+
+foreach $file (@files) {
+>>>>>>> Stashed changes
     
-    chdir("../");
+            if (-d $file)  {
+                chdir($file);
+                mkdir($newfoldername);
+                chdir("../");
+            }
+
     
 }
+
+
+## Create the Folder in Each Period ##
+
+#foreach $period (@periods) {
+#
+#    chdir($period) or die "folder doesn't exist\n\n";
+#    @files = <*>;
+#    foreach $file (@files) {
+#        
+#        if (-d $file)  {
+#            chdir($file);
+#            mkdir($newfoldername);
+#            chdir("../");
+#        }
+#        
+#        
+#    }
+#    
+#    chdir("../");
+#    
+#}
 

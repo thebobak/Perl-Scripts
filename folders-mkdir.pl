@@ -11,6 +11,40 @@ $destination_filename = "Apples-to-Apples.xlsx";
    
   
  }
+
+
+
+@names = (
+
+"Lesly Arevalo",
+"Ademir Bautista",
+"Maria Ester Bravo-Huezo",
+"Destiny Bumpers",
+"Pedro Casarrubia",
+"Lester Castillo",
+"Jocelyn Cruz",
+"Marlene Gutierrez",
+"Alisha	Henley",
+"Stephanie Hernandez",
+"Jing Huang",
+"Biyeshi Kumsa",
+"Kevin Lara",
+"Bianca Moreno-Martinez",
+"Jonathan Palacios",
+"Armani Person",
+"Agustina Pineda",
+"Christian Ray",
+"Alexis Reddock",
+"Gabriel Siaw",
+"Randi Smith",
+"Josue Torres",
+"Katherine Ventura",
+"Jose Villatoro",
+);
+
+foreach $name (@names) {
+    mkdir($name);
+}
  
  
 
