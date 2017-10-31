@@ -14,9 +14,9 @@ my $password = prompt('Password:', -e => '*');
 
  
 ## OPEN THE CSV ## 
-##my $file = $ARGV[0] or die "Need to get CSV file on the command line\n";
+## my $file = $ARGV[0] or die "Need to get CSV file on the command line\n";
 
-##my $file = '/Users/bobak/Desktop/contacts.csv';
+my $file = '/users/bobak/Desktop/contacts.csv';
 
 
 my $csv = Text::CSV->new ({
@@ -50,8 +50,7 @@ my $thebody = <<"BODY";
     <html>
     <body>
     <p>Dear $first:</p>
-    <br>
-    $blogname
+    This is a test message.
         </body>
     </html>
     
